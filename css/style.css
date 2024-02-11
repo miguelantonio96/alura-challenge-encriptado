@@ -241,7 +241,6 @@ textarea:focus::placeholder {
 }
 
 
-
 .button-encriptar{
     width: 328px;
     height: 67px;
@@ -258,8 +257,7 @@ textarea:focus::placeholder {
     box-shadow: 0px 0px 18px 4px rgba(0, 0,0,0.7);
 }
 
-.button-encriptar:hover{
-    background-color: #c5c2bd;
+.button-encriptar:hover{   
     font-size: 26px;
     color: var(--yellow);
     transition: 300ms;
@@ -268,6 +266,7 @@ textarea:focus::placeholder {
 
 .button-encriptar:active{
     transform: scale(1);
+    background-color: #c5c2bd;
 }
 
 .button-desencriptar{
@@ -286,7 +285,7 @@ textarea:focus::placeholder {
 }
 
 .button-desencriptar:hover{
-    background-color: #c5c2bd;
+    
     font-size: 26px;
     color: var(--yellow);
     transition: 300ms;
@@ -296,6 +295,7 @@ textarea:focus::placeholder {
 
 .button-desencriptar:active{
     transform: scale(1);
+    background-color: #c5c2bd;
 }
 
 
