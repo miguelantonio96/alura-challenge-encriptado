@@ -1,4 +1,4 @@
-const cajaTexto = document.querySelector(".caja-textarea");
+const cajaTextarea = document.querySelector(".caja-textarea");
 const notMessageFound = document.querySelector(".contenedor-parrafo");
 const EnterMessage = document.querySelector("contenedor-resultado");
 
@@ -6,11 +6,11 @@ const parrafoResultado = document.querySelector("#result");
 notMessageFound.style.display = "none";
 
 const btnCopy = document.querySelector(".button-copiar");
-btnCopy.addEventListener("click", () => copyText(cajaTexto.value));
+btnCopy.addEventListener("click", () => copyText(cajaTextarea.value));
 
 //Encriptar función
 const btnEncrypt = document.querySelector(".button-encriptar");
-btnEncrypt.addEventListener("click", () => encrypt(cajaTexto.value));
+btnEncrypt.addEventListener("click", () => encrypt(cajaTextarea.value));
 
 function encrypt(textEnter) {
   let textEncrypted = "";
@@ -46,7 +46,7 @@ function encrypt(textEnter) {
 
 // Decrypt function
 const btnDecrypt = document.querySelector(".button-desencriptar");
-btnDecrypt.addEventListener("click", () => decrypt());
+btnDecrypt.addEventListener("click", () => decrypt(cajaTextarea.value));
 
 function decrypt(textEnter) {
   let textEncrypted =
