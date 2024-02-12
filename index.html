@@ -52,56 +52,61 @@
     </header>
 
     <main>
+     
       <section class="seccion1">
-        <div class="seccion1-content"></div>
+            <div class="seccion1-content"></div>
 
-        <div class="contenedor-caja-textarea">
-          <textarea
-            class="caja-textarea"
-            placeholder="Enter text here"
-            cols="50"
-            onFocus="if (this.value ='Enter text here') this.value='';"
-          ></textarea>
-        </div>
+            <div class="contenedor-caja-textarea">
+              <textarea
+                class="caja-textarea"
+                placeholder="Enter text here"
+                cols="50"
+                onFocus="if (this.value ='Enter text here') this.value='';"
+              ></textarea>
+            </div>
 
-        <div class="contenedor-botones">
-          <button class="button-encriptar" type="button" title="Button Encrypted">Encrypt</button>
-          <button class="button-desencriptar" type="button" title="Button Decrypted">Decrypt</button>
-        </div>
+            <div class="contenedor-botones">
+              <button class="button-encriptar" type="button" title="Button Encrypted">Encrypt</button>
+              <button class="button-desencriptar" type="button" title="Button Decrypted">Decrypt</button>
+            </div>
 
-        <div class="contenedor-alerta">
-          <img class="alerta" src="./img/alerta.png" alt="alerta" />
-          <p class="alerta-texto">Only lowercase letters and no accents</p>
-        </div>
+            <div class="contenedor-alerta">
+              <img class="alerta" src="./img/alerta.png" alt="alerta" />
+              <p class="alerta-texto">Only lowercase letters and no accents</p>
+            </div>
       </section>
 
+     
       <section class="seccion2 position-relative">
         
-              <div class="muneco">
-                <img class="image-muneco" src="./img/Muneco.png" alt="muneco" />
-              </div>
+            <div class="muneco">
+              <img class="image-muneco" src="./img/Muneco.png" alt="muneco" />
+            </div>
 
-              <div
-                class="contenedor-parrafo alert alert-info position-absolute text-center text-info ">
-                <h3 class="animate__animated animate__bounceIn">No message was<br />found</h3>
-              </div>
-              
-              <div class="contenedor-resultado">
-                <p id="result"></p>
-              </div>
-              
-              <div class="contenedor-copiar">
-                <button class="button-copiar" type="button" title="Button copied">Copy</button>
-                <p class="texto-resultado"></p>
-              </div>
+            <div
+              class="contenedor-parrafo alert alert-info position-absolute text-center text-info ">
+              <h3 class="animate__animated animate__bounceIn">No message was<br />found</h3>
+            </div>
             
+            <div class="contenedor-resultado">
+              <p id="result"></p>
+            </div>
+            
+            <div class="contenedor-copiar">
+              <button class="button-copiar" type="button" title="Button copied">Copy</button>
+              <p class="texto-resultado"></p>
+            </div>
+          
       </section>
+
     </main>
 
+    
     <footer class="footer-container">
       <em class="copy-icon">&copy;</em>
       <p>Copyright by Miguel Casado - 2024</p>
     </footer>
+
     <script src="./js/index.js"></script>
   </body>
 </html>

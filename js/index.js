@@ -3,28 +3,24 @@ const notMessageFound = document.querySelector(".contenedor-parrafo");
 const parrafoResultado = document.querySelector("#result");
 notMessageFound.style.display = "none";
 
-
-
-    //                 Decrypt function            \\
+//                 Decrypt function            \\
 
 const btnEncrypt = document.querySelector(".button-encriptar");
 btnEncrypt.addEventListener("click", () => encrypt(cajaTextarea.value));
 
-
 function encrypt(textEnter) {
   let textEncrypted = "";
-  
+
   textEnter = textEnter.toLowerCase();
-  
-if (!textEnter) {
-    notMessageFound.style.display = "unset"; 
+
+  if (!textEnter) {
+    notMessageFound.style.display = "unset";
   } else {
     notMessageFound.style.display = "none";
   }
   setTimeout(() => {
     notMessageFound.style.display = "none";
   }, 2000);
-
 
   for (let i = 0; i < textEnter.length; i++) {
     if (textEnter[i] === "a") {
@@ -41,28 +37,27 @@ if (!textEnter) {
       textEncrypted += textEnter[i];
     }
   }
-  
-  
-  
+
   parrafoResultado.textContent = textEncrypted;
 
-  btnEncrypt.innerText = "Encrypted";
+  if (textEnter) btnEncrypt.innerText = "Encrypted";
+
   setTimeout(() => {
     btnEncrypt.innerText = "Encrypt";
   }, 2000);
 
-
+  cajaTextarea.value = "";
 }
 
-
-      //                 Decrypt function            \\
+//                 Decrypt function            \\
 
 const btnDecrypt = document.querySelector(".button-desencriptar");
 btnDecrypt.addEventListener("click", () => decrypt(cajaTextarea.value));
 
 function decrypt(textEnter) {
-  let textEncrypted = textEnter || document.querySelector(".caja-textarea").value;
-  
+  let textEncrypted =
+    textEnter || document.querySelector(".caja-textarea").value;
+
   if (!textEncrypted) {
     notMessageFound.style.display = "unset";
   } else {
@@ -72,8 +67,6 @@ function decrypt(textEnter) {
     notMessageFound.style.display = "none";
   }, 2000);
 
-
-
   let textDecrypted = textEncrypted
     .replaceAll("enter", "e")
     .replaceAll("ai", "a")
@@ -82,37 +75,35 @@ function decrypt(textEnter) {
     .replaceAll("ufat", "u");
 
   document.querySelector("#result").textContent = textDecrypted;
-  
 
-  btnDecrypt.innerText = "Decrypted";
+  if (textEnter) btnEncrypt.innerText =  "Decrypted";
   setTimeout(() => {
     btnDecrypt.innerText = "Decrypt";
   }, 2000);
-
 }
-
-
 
 //                 Copy function            \\
 
 const btnCopy = document.querySelector(".button-copiar");
 btnCopy.addEventListener("click", () => copyText(cajaTextarea.value));
 
-
 function copyText() {
   let copyText = document.querySelector("#result");
-  
-  setTimeout(() => {notMessageFound.style.display = "none"}, 2000)
+
+  setTimeout(() => {
+    notMessageFound.style.display = "none";
+  }, 2000);
 
   if (!copyText.textContent) {
-    return notMessageFound.style.display = "unset";
+    return (notMessageFound.style.display = "unset");
   } else {
-    notMessageFound.style.display = "none"; 
+    notMessageFound.style.display = "none";
   }
-  
-  navigator.clipboard.writeText(copyText.textContent);
-  
-  btnCopy.innerText = "Copied";
-  setTimeout(() => {btnCopy.innerText = "Copy";}, 2000);
 
+  navigator.clipboard.writeText(copyText.textContent);
+
+  btnCopy.innerText = "Copied";
+  setTimeout(() => {
+    btnCopy.innerText = "Copy";
+  }, 2000);
 }
