@@ -1,12 +1,14 @@
 const cajaTextarea = document.querySelector(".caja-textarea");
 const notMessageFound = document.querySelector(".contenedor-parrafo");
 const parrafoResultado = document.querySelector("#result");
-notMessageFound.style.display = "none";
 
-//                 Decrypt function            \\
+
+
+//                 Decrypt button function            \\
 
 const btnEncrypt = document.querySelector(".button-encriptar");
 btnEncrypt.addEventListener("click", () => encrypt(cajaTextarea.value));
+notMessageFound.style.display = "none";
 
 function encrypt(textEnter) {
   let textEncrypted = "";
@@ -15,9 +17,8 @@ function encrypt(textEnter) {
 
   if (!textEnter) {
     notMessageFound.style.display = "unset";
-  } else {
-    notMessageFound.style.display = "none";
   }
+
   setTimeout(() => {
     notMessageFound.style.display = "none";
   }, 2000);
@@ -41,7 +42,6 @@ function encrypt(textEnter) {
   parrafoResultado.textContent = textEncrypted;
 
   if (textEnter) btnEncrypt.innerText = "Encrypted";
-
   setTimeout(() => {
     btnEncrypt.innerText = "Encrypt";
   }, 2000);
@@ -49,20 +49,18 @@ function encrypt(textEnter) {
   cajaTextarea.value = "";
 }
 
-//                 Decrypt function            \\
+//                 Decrypt button function            \\
 
 const btnDecrypt = document.querySelector(".button-desencriptar");
 btnDecrypt.addEventListener("click", () => decrypt(cajaTextarea.value));
 
 function decrypt(textEnter) {
-  let textEncrypted =
-    textEnter || document.querySelector(".caja-textarea").value;
+  let textEncrypted = textEnter;
 
   if (!textEncrypted) {
     notMessageFound.style.display = "unset";
-  } else {
-    notMessageFound.style.display = "none";
   }
+
   setTimeout(() => {
     notMessageFound.style.display = "none";
   }, 2000);
@@ -76,28 +74,30 @@ function decrypt(textEnter) {
 
   document.querySelector("#result").textContent = textDecrypted;
 
-  if (textEnter) btnEncrypt.innerText =  "Decrypted";
+  if (textEnter) btnDecrypt.innerText = "Decrypted";
   setTimeout(() => {
     btnDecrypt.innerText = "Decrypt";
   }, 2000);
+
+  cajaTextarea.value = "";
 }
 
-//                 Copy function            \\
+//                 Copy button function            \\
 
 const btnCopy = document.querySelector(".button-copiar");
 btnCopy.addEventListener("click", () => copyText(cajaTextarea.value));
+const notTextFound = document.querySelector(".contenedor-parrafo-2");
+notTextFound.style.display = "none";
 
 function copyText() {
   let copyText = document.querySelector("#result");
 
   setTimeout(() => {
-    notMessageFound.style.display = "none";
+    notTextFound.style.display = "none";
   }, 2000);
 
   if (!copyText.textContent) {
-    return (notMessageFound.style.display = "unset");
-  } else {
-    notMessageFound.style.display = "none";
+    return (notTextFound.style.display = "unset");
   }
 
   navigator.clipboard.writeText(copyText.textContent);
