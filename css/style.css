@@ -1,56 +1,42 @@
-
 :root {
-  --yellow: #ff9600;
+  --yellow: #fbc00e;
 }
 
 body {
   width: 100vw;
   margin: 8px;
-  background-color: #272626 !important;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.4;
-  width: 100vw;
-  height: 100vh;
-  z-index: -1;
+  background-color: #000000 !important;
 }
 
 main {
   display: flex;
+  align-items: center;
   justify-content: space-around;
-  height: calc(100vh - 310px);
+  height: calc(100vh - 330px);
 }
 
 .header-container {
+  height: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 205px 0 0px;
-  height: 200px;
+  margin-bottom: 20px;
 }
 
 .alura-challenge-logo {
+  height: 150px;
   position: absolute;
-  height: 95px;
-  width: 95px;
-  z-index: 5;
-  top: 52px;
-  right: 595px;
-  border-radius: 25px;
-  box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.7);
+  top: 25px;
+  right: 600px;
 }
 
 .words-alu-cha-container {
+  height: 200px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0px 0px 0 20px;
-  height: 200px;
+  padding: 0px 205px 0 20px;
 }
 
 .word-alura {
@@ -64,7 +50,7 @@ main {
 .word-challenges {
   font-size: 48px;
   font-family: "Moirai One", system-ui;
-  color: #2a9fbd;
+  color: #357c87;
 }
 
 .logo {
@@ -73,12 +59,15 @@ main {
 
 .contenedor-caja-textarea {
   width: 80%;
-  height: 750px;
+  height: 855px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .caja-textarea {
-  width: 100%;
-  height: 100%;
+  width: 70%;
+  height: 85%;
   border: none;
   border-radius: 24px;
   background: none;
@@ -105,18 +94,19 @@ textarea:focus::placeholder {
 }
 
 .alerta {
+  height: 26px;
   display: flex;
+  margin-right: 5px;
   color: #495057;
   opacity: 1.8;
-  height: 26px;
-  margin-right: 5px;
 }
 
 .contenedor-alerta {
-  display: flex;
-  margin-bottom: 20px;
   width: 100%;
+  display: flex;
   justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 
 .alerta-texto {
@@ -130,12 +120,14 @@ textarea:focus::placeholder {
   flex-direction: column;
   overflow: hidden;
   height: 100%;
-  justify-content: space-between;
   align-items: center;
   width: 50%;
   position: relative;
-  border-radius: 150px 150px 60px 60px;
-  
+  border-radius: 500px;
+  background-image: url("../img/5Azw1S.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .seccion1-content {
@@ -144,9 +136,7 @@ textarea:focus::placeholder {
   filter: blur(8px);
   -webkit-filter: blur(8px);
   background-color: rgba(0, 0, 0, 0.4);
-
   color: white;
-
   border-radius: 24px;
   position: absolute;
   top: 50%;
@@ -159,55 +149,56 @@ textarea:focus::placeholder {
   font-weight: bold;
 }
 
+
+
+/*************************** Section 2 */
+
 .seccion2 {
   width: 450px;
   height: 100%;
-  margin-right: 14px;
   display: flex;
   overflow: hidden;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   background-blend-mode: multiply;
   border: 0.1px solid #357c87;
   border-radius: 100px 10px;
   box-shadow: 0px 0px 40px 4px rgba(0, 0, 0, 0.7);
 }
 
-.muneco {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 40px;
-  transition: all 1s;
-}
-
 .image-muneco {
   position: absolute;
-  opacity: 0.4;
+  opacity: 0.8;
   z-index: -1;
   transition: all 1s;
-  animation: 5s ease-in-out 1s infinite alternate running brincar;
+  animation: 5s ease-in-out infinite brincar;
+  display: flex;
+  justify-content: center;
+  transition: all 1s;
+
+  
 }
 
 @keyframes brincar {
-  0% {
-    transform: translateY(-20%);
+  50% {
+    transform: translateY(100%);
   }
 
   100% {
-    transform: translateY(70%);
+    transform: translateY(0%);
   }
 }
 
 .contenedor-botones {
   width: 100%;
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 40px;
+  justify-content: center;
 }
 
 .button-encriptar {
-    width: 25%;
+  width: 25%;
   height: 67px;
+  margin-right: 15px;
   border-radius: 24px 5px 5px 24px;
   background-color: #0a3871;
   color: var(--yellow);
@@ -233,8 +224,9 @@ textarea:focus::placeholder {
 }
 
 .button-desencriptar {
-    width: 25%;
+  width: 25%;
   height: 67px;
+  margin-left: 15px;
   border-radius: 5px 24px 24px 5px;
   background-color: #ffffff;
   color: var(--yellow);
@@ -261,7 +253,6 @@ textarea:focus::placeholder {
 .button-copiar {
   width: 328px;
   height: 67px;
-  margin-top: 56px;
   border-radius: 24px 5px 24px 5px;
   background-color: var(--yellow);
   color: #154e7b;
@@ -279,7 +270,7 @@ textarea:focus::placeholder {
 }
 
 .button-copiar:active {
-  transform: scale(1) ;
+  transform: scale(1);
   background-color: #c5c2bd;
 }
 
@@ -307,37 +298,42 @@ textarea:focus::placeholder {
   color: tomato;
 }
 
-
 .contenedor-resultado {
   overflow-y: auto;
   overflow-x: hidden;
   text-wrap: wrap;
   word-break: break-all;
   width: 80%;
-  height: 65%;
-  padding: 0px 45px;
+  height: 70%;
   margin-bottom: 132px;
   margin: 0px 45px;
 }
 
-.contenedor-resultado p {
+
+#result {
+  width: 100%;
+  height: 95%;
+  border: none;
+  overflow-y: auto;
+  overflow-x: hidden;
+  text-wrap: wrap;
+  resize: none;
+  word-break: break-all;
+  justify-content: center;
+  background: none;
   font-family: "Courier New", Courier, monospace;
   font-weight: bold;
   font-size: 30px;
   text-align: center;
-  margin-top: 40px;
-  color: #02ffea;
-}
-
-#result {
-  justify-content: center;
+  color: var(--yellow);
 }
 
 .contenedor-copiar {
   display: inline-block;
   align-self: center;
-
 }
+
+/****************************** Footer */
 
 .footer-container {
   bottom: 0;
@@ -347,10 +343,9 @@ textarea:focus::placeholder {
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  align-items: center;
   font-weight: bold;
   color: white;
-  background-color: #0a3871;
+  background-color: rgb(25 24 28);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -358,15 +353,39 @@ textarea:focus::placeholder {
     rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
+.copyright-container {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.github-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 94px;
+  bottom: 20px;
+}
+
+.github-container img {
+  height: 50px;
+}
+
+.github-container a {
+  text-decoration-line: none;
+  color: #b90000;
+}
+
+.footer-container p {
+  margin-bottom: 0;
+}
 .copy-icon {
   margin-right: 4px;
-  margin-bottom: 18px;
   font-size: 30px;
 }
 
-
 /* For mobile phones: */
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 480px) {
   body {
     width: 100vw;
     height: 100vh;
@@ -376,7 +395,7 @@ textarea:focus::placeholder {
 
   main {
     width: 99.8%;
-    height: calc(100% - 150px);
+    height: calc(100% - 180px);
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -386,6 +405,7 @@ textarea:focus::placeholder {
     height: 100px;
     padding: 0px 0px 0px 0px;
     justify-content: center;
+    margin-bottom: 20px;
   }
 
   .words-alu-cha-container {
@@ -420,24 +440,21 @@ textarea:focus::placeholder {
 
   .seccion1 {
     width: 100%;
-    height: 60%;
+    height: 45%;
   }
 
   .seccion2 {
     width: 90%;
     height: 35%;
     margin: 19px;
+    align-items: center;
     border-radius: 100px 1px;
     box-shadow: 0px 42px 75px -33px rgba(0, 0, 0, 0.5);
   }
 
-  .contenedor-botones {
-    justify-content: space-around;
-  }
-
   .contenedor-caja-textarea {
-    width: 90%;
-    height: 300px;
+    width: 85%;
+    height: 70%;
   }
 
   .caja-textarea {
@@ -451,36 +468,56 @@ textarea:focus::placeholder {
   }
 
   .button-encriptar {
-    margin: 0;
-    width: 40%;
-    height: 50px;
-    font-size: 24px;
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
   }
+
+  .button-encriptar:hover {
+    font-size: 16px;
+    color: var(--yellow);
+    transition: 300ms;
+    transform: scale(1.05);
+  }
+
+  .button-encriptar:active {
+    font-size: 16px;
+    transform: scale(1);
+    background-color: #c5c2bd;
+  }
+
   .button-desencriptar {
-    margin: 0;
-    width: 40%;
-    height: 50px;
-    font-size: 24px;
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .button-desencriptar:hover {
+    font-size: 16px;
+    color: var(--yellow);
+    transition: 300ms;
+    transform: scale(1.05);
+  }
+
+  .button-desencriptar:active {
+    font-size: 16px;
+    transform: scale(1);
+    background-color: #c5c2bd;
   }
 
   .contenedor-alerta {
     margin: 5px 0 0 0;
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .alerta {
-    width: 20px;
+    width: 18px;
     height: fit-content;
     margin: 2px 0 0 0px;
   }
 
   .contenedor-alerta > p {
     margin-left: 4px;
-  }
-
-  .footer-container {
-    margin-top: 0px;
-    height: 50px;
   }
 
   .contenedor-resultado {
@@ -503,9 +540,206 @@ textarea:focus::placeholder {
   .muneco {
     display: none;
   }
+
+  .footer-container {
+    margin-top: 0px;
+    height: 60px;
+  }
+
+  .github-container img {
+    height: 30px;
+  }
 }
 
-@media only screen and (max-height: 1100px) {
+/********************* Media Height 1300px */
+
+@media only screen and (max-width: 1300px) {
+  body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+  main {
+    width: 100%;
+    height: calc(100% - 190px);
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .header-container {
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  .words-alu-cha-container {
+    height: 100px;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .word-alura {
+    font-size: 36px;
+    font-family: "Ubuntu", sans-serif;
+    color: #ff9600;
+    margin: 0 0 0 0;
+  }
+
+  .word-challenges {
+    font-size: 36px;
+    font-family: "Moirai One", system-ui;
+    color: #2a9fbd;
+    margin: 0 0 0 0;
+  }
+
+  .logo {
+    display: none;
+  }
+  .alura-challenge-logo {
+    display: none;
+  }
+
+  .challenge-header {
+    height: 50%;
+  }
+
+  .seccion1 {
+    width: 80%;
+    height: 45%;
+  }
+
+  .seccion2 {
+    width: 80%;
+    height: 35%;
+    margin: 19px;
+    align-items: center;
+    border-radius: 100px 1px;
+    box-shadow: 0px 42px 75px -33px rgba(0, 0, 0, 0.5);
+  }
+
+  .muneco {
+    display: none;
+  }
+
+  .contenedor-caja-textarea {
+    width: 85%;
+  }
+
+  .caja-textarea {
+    margin: 15px 0 0 0;
+    padding: 0;
+    font-size: 1rem;
+  }
+
+  textarea::placeholder {
+    font-size: 1rem;
+  }
+
+  .button-encriptar {
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .button-encriptar:hover {
+    font-size: 16px;
+    color: var(--yellow);
+    transition: 300ms;
+    transform: scale(1.05);
+  }
+
+  .button-encriptar:active {
+    font-size: 16px;
+    transform: scale(1);
+    background-color: #c5c2bd;
+  }
+
+  .button-desencriptar {
+    width: 30%;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .button-desencriptar:hover {
+    font-size: 16px;
+    color: var(--yellow);
+    transition: 300ms;
+    transform: scale(1.05);
+  }
+
+  .button-desencriptar:active {
+    font-size: 16px;
+    transform: scale(1);
+    background-color: #c5c2bd;
+  }
+
+  .button-copiar {
+    width: 328px;
+    height: 67px;
+    border-radius: 24px 5px 24px 5px;
+    background-color: var(--yellow);
+    color: #154e7b;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Courier New", Courier, monospace;
+    cursor: pointer;
+    box-shadow: 0px 0px 18px 4px rgba(0, 0, 0, 0.7);
+  }
+
+  .button-copiar:hover {
+    font-size: 26px;
+    transition: 300ms;
+    transform: scale(1.05);
+  }
+
+  .button-copiar:active {
+    transform: scale(1);
+    background-color: #c5c2bd;
+  }
+
+  .contenedor-alerta {
+    margin: 5px 0 0 0;
+    font-size: 11px;
+  }
+
+  .alerta {
+    width: 18px;
+    height: fit-content;
+    margin: 2px 0 0 0px;
+  }
+
+  .contenedor-alerta > p {
+    margin-left: 4px;
+    font-size: x-small;
+  }
+
+  .footer-container {
+    margin-top: 0px;
+    height: 70px;
+    font-size: x-small;
+  }
+
+  .github-container p {
+    display: none;
+  }
+
+  .github-container img {
+    position: relative;
+    height: 30px;
+    right: 60px;
+  }
+  .contenedor-resultado {
+    width: 73%;
+    height: 73%;
+    padding: 0px 0px;
+  }
+  .contenedor-resultado p {
+    font-size: medium;
+  }
+
   .muneco {
     display: none;
   }

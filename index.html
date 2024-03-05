@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Challenge - Encrypt One</title>
-    <link rel="icon" href="./img/alura challenge logo.png" />
-    <link rel="stylesheet" href="./css/style.css"/>
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <title>Challenge - Encrypt One</title>
+    <link rel="icon" href="./img/images.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -28,20 +28,19 @@
       crossorigin="anonymous"
     />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
-
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
   </head>
 
   <body>
-    <img src="./img/background-image.jpg" class="background-image" />
+    
     <header class="header-container">
-      <img class="logo" src="./img/Logo (1).png" alt="logo" />
+      <img class="logo" src="./img/Logo (1).png" alt="logo"/>
 
       <img
         class="alura-challenge-logo"
-        src="./img/alura challenge logo1.png"
+        src="./img/images.png"
         alt="alura-header"
       />
 
@@ -52,65 +51,79 @@
     </header>
 
     <main>
-     
       <section class="seccion1">
-            <div class="seccion1-content"></div>
-
-            <div class="contenedor-caja-textarea">
-              <textarea
-                class="caja-textarea"
-                placeholder="Enter text here"
-                cols="50"
-                onFocus="if (this.value ='Enter text here') this.value='';"
-              ></textarea>
-            </div>
-
-            <div class="contenedor-botones">
-              <button class="button-encriptar" type="button" title="Button Encrypted">Encrypt</button>
-              <button class="button-desencriptar" type="button" title="Button Decrypted">Decrypt</button>
-            </div>
-
-            <div class="contenedor-alerta">
-              <img class="alerta" src="./img/alerta.png" alt="alerta" />
-              <p class="alerta-texto">Only lowercase letters and no accents</p>
-            </div>
-      </section>
-
-     
-      <section class="seccion2 position-relative">
         
-            <div class="muneco">
-              <img class="image-muneco" src="./img/Muneco.png" alt="muneco" />
-            </div>
+        <div class="seccion1-content"></div>
 
-            <div
-              class="contenedor-parrafo alert alert-info position-absolute text-center text-info ">
-              <h3 class="animate__animated animate__bounceIn">No message was<br />found</h3>
-            </div>
+        <div class="contenedor-caja-textarea">
+          <textarea class="caja-textarea" placeholder="Enter text here" cols="20" rows="10"></textarea>
+        </div>
 
+        <div class="contenedor-botones">
+          <button
+            class="button-encriptar"
+            type="button"
+            title="Button Encrypted"
+          >
+            Encrypt
+          </button>
+          <button
+            class="button-desencriptar"
+            type="button"
+            title="Button Decrypted"
+          >
+            Decrypt
+          </button>
+        </div>
 
-            <div
-              class="contenedor-parrafo-2 alert alert-info position-absolute text-center text-info">
-              <h2 class="animate__animated animate__bounceIn">No text was<br />copied</h2>
-            </div>
-            
-            <div class="contenedor-resultado">
-              <p id="result"></p>
-            </div>
-            
-            <div class="contenedor-copiar">
-              <button class="button-copiar" type="button" title="Button copied">Copy</button>
-              <p class="texto-resultado"></p>
-            </div>
-          
+        <div class="contenedor-alerta">
+          <img class="alerta" src="./img/alerta.png" alt="alerta" />
+          <p class="alerta-texto">Only lowercase letters and no accents</p>
+        </div>
+
+        <div
+        class="contenedor-parrafo alert alert-info position-absolute text-center text-info"
+      >
+        <h3 class="animate__animated animate__bounceIn">
+          No message was<br/>found
+        </h3>
+      </div>
+
       </section>
 
+      <section class="seccion2 position-relative">      
+
+        <div class="contenedor-resultado">
+          <img class="image-muneco" src="./img/Muneco.png" alt="muneco" />
+          <textarea id="result"></textarea>
+        </div>
+
+        <div class="contenedor-copiar">
+          <button class="button-copiar" type="button" title="Button copied">
+            Copy
+          </button>   
+        </div>
+       
+        <div class="contenedor-parrafo-2 alert alert-info position-absolute text-center text-info">
+          <h2 class="animate__animated animate__bounceIn">
+          No text was<br/>copied
+          </h2>
+        </div>
+
+      </section>
     </main>
 
-    
     <footer class="footer-container">
-      <em class="copy-icon">&copy;</em>
-      <p>Copyright by Miguel Casado - 2024</p>
+      <nav class="github-container">
+        <a href="https://github.com/miguelantonio96/alura-challenge-encriptado"><img src="img/github-icon.png" alt=""></a>
+        <a href="https://github.com/miguelantonio96/alura-challenge-encriptado"><p>Github</p></a>
+      </nav>
+
+      <div class="copyright-container">
+        <em class="copy-icon">&copy;</em>
+        <p>Copyright by Miguel Casado - 2024</p>
+      </div>
+      
     </footer>
 
     <script src="./js/index.js"></script>
