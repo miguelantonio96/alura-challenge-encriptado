@@ -276,14 +276,15 @@ textarea:focus::placeholder {
 
 .contenedor-parrafo {
   background: dimgrey;
-  width: 75%;
-  top: 50%;
+  width: 40%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .contenedor-parrafo h3 {
-  color: tomato;
+  color: red;
+  
 }
 
 .contenedor-parrafo-2 {
@@ -295,8 +296,12 @@ textarea:focus::placeholder {
 }
 
 .contenedor-parrafo-2 h2 {
-  color: tomato;
+  color: red;
 }
+
+
+
+
 
 .contenedor-resultado {
   overflow-y: auto;
@@ -620,9 +625,32 @@ textarea:focus::placeholder {
     box-shadow: 0px 42px 75px -33px rgba(0, 0, 0, 0.5);
   }
 
-  .muneco {
-    display: none;
+ 
+  .image-muneco {
+    height: 250px;
+    position: absolute;
+    opacity: 0.8;
+    z-index: -1;
+    transition: all 1s;
+    animation: 4s ease-in-out infinite brincar;
+    display: flex;
+    justify-content: center;
+    transition: all 1s;
+  
+    
   }
+  
+  @keyframes brincar {
+    50% {
+      transform: translateX(115%);
+    }
+  
+    100% {
+      transform: translateX(0%);
+    }
+  }
+
+
 
   .contenedor-caja-textarea {
     width: 85%;
