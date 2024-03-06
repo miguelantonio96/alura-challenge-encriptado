@@ -542,8 +542,8 @@ textarea:focus::placeholder {
     display: none;
   }
 
-  .muneco {
-    display: none;
+  .image-muneco {
+    display: none !important;
   }
 
   .footer-container {
@@ -768,7 +768,5 @@ textarea:focus::placeholder {
     font-size: medium;
   }
 
-  .muneco {
-    display: none;
-  }
+  
 }
