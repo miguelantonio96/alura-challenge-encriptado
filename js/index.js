@@ -62,9 +62,11 @@ function decrypt(textEnter) {
     notMessageFound.style.display = "unset";
     notTextFound.style.display = "none";
     muneco.style.display = "unset";
+    
     setTimeout(() => {
       notMessageFound.style.display = "none";
       muneco.style.display = "unset";
+      
     }, 2000);
     return;
   }
