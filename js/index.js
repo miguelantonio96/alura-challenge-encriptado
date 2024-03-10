@@ -117,7 +117,6 @@ function copyText() {
   }, 2000);
 
 
-  
-
-
 }
+
+

@@ -11,6 +11,9 @@ body {
 main {
   display: flex;
   align-items: center;
+  border-radius: 85px 85px 0px 0px;
+  border-top: 3px solid;
+  padding-top: 20px;
   justify-content: space-around;
   height: calc(100vh - 330px);
 }
@@ -58,7 +61,7 @@ main {
   height: 50%;
 }
 
-.contenedor-caja-textarea { 
+.contenedor-caja-textarea {
   width: 80%;
   height: 85%;
   display: flex;
@@ -71,7 +74,6 @@ main {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  
 }
 
 .caja-textarea {
@@ -132,29 +134,7 @@ textarea:focus::placeholder {
   align-items: center;
   width: 50%;
   position: relative;
- 
 }
-
-.seccion1-content {
-  width: 100%;
-  height: 100%;
-  filter: blur(8px);
-  -webkit-filter: blur(8px);
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  border-radius: 24px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  width: 100%;
-  padding: 20px;
-  text-align: center;
-  font-weight: bold;
-}
-
-
 
 /*************************** Section 2 */
 
@@ -173,15 +153,13 @@ textarea:focus::placeholder {
 
 .image-muneco {
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: -1;
   transition: all 1s;
   animation: 5s ease-in-out infinite brincar;
   display: flex;
   justify-content: center;
   transition: all 1s;
-
-  
 }
 
 @keyframes brincar {
@@ -245,7 +223,7 @@ textarea:focus::placeholder {
 
 .button-desencriptar:hover {
   font-size: 26px;
-  color: var(--yellow);
+  color: #0a3871;
   transition: 300ms;
   transform: scale(1.05);
 }
@@ -289,7 +267,6 @@ textarea:focus::placeholder {
 
 .contenedor-parrafo h3 {
   color: red;
-  
 }
 
 .contenedor-parrafo-2 {
@@ -304,10 +281,6 @@ textarea:focus::placeholder {
   color: red;
 }
 
-
-
-
-
 .contenedor-resultado {
   overflow-y: auto;
   overflow-x: hidden;
@@ -318,7 +291,6 @@ textarea:focus::placeholder {
   margin-bottom: 132px;
   margin: 0px 45px;
 }
-
 
 #result {
   width: 100%;
@@ -355,7 +327,12 @@ textarea:focus::placeholder {
   justify-content: center;
   font-weight: bold;
   color: white;
-  background-color: rgb(25 24 28);
+  border-top: 1px solid #757575;
+  border-left: 1px solid #757575;
+  border-right: 1px solid #757575;
+  border-radius: 85px 85px 0px 0px;
+  border-radius: 85px 85px 0px 0px;
+  background-color: rgb(40 40 40);
   box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
     rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
@@ -394,8 +371,8 @@ textarea:focus::placeholder {
   font-size: 30px;
 }
 
-/* For mobile phones: */
-@media only screen and (max-width: 480px) {
+/************************** For mobile phones: */
+@media only screen and (max-width: 600px){
   body {
     width: 100vw;
     height: 100vh;
@@ -404,8 +381,8 @@ textarea:focus::placeholder {
   }
 
   main {
-    width: 99.8%;
-    height: calc(100% - 180px);
+    width: 100%;
+    height: calc(100% - 190px);
     margin: 0;
     padding: 0;
     flex-direction: column;
@@ -415,7 +392,7 @@ textarea:focus::placeholder {
     height: 100px;
     padding: 0px 0px 0px 0px;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-bottom: 0px;
   }
 
   .words-alu-cha-container {
@@ -450,13 +427,18 @@ textarea:focus::placeholder {
 
   .seccion1 {
     width: 100%;
-    height: 45%;
+  }
+
+  .contenedor-botones {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
   }
 
   .seccion2 {
     width: 90%;
-    height: 35%;
-    margin: 19px;
+    height: 45%;
+    margin: 15px;
     align-items: center;
     border-radius: 100px 1px;
     box-shadow: 0px 42px 75px -33px rgba(0, 0, 0, 0.5);
@@ -465,6 +447,10 @@ textarea:focus::placeholder {
   .contenedor-caja-textarea {
     width: 85%;
     height: 70%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    margin-bottom: 5px;
   }
 
   .caja-textarea {
@@ -528,6 +514,7 @@ textarea:focus::placeholder {
 
   .contenedor-alerta > p {
     margin-left: 4px;
+    margin-bottom: 0px;
   }
 
   .contenedor-resultado {
@@ -539,6 +526,19 @@ textarea:focus::placeholder {
     font-size: medium;
   }
 
+  .contenedor-parrafo {
+    display: flex;
+    width: 40%;
+    height: 35%;
+    padding: 7px !important;
+    justify-content: center;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .contenedor-parrafo > h3 {
+    width: -webkit-fill-available;
+  }
   .contenedor-copiar {
     display: none;
   }
@@ -552,18 +552,25 @@ textarea:focus::placeholder {
   }
 
   .footer-container {
+    display: inline-block;
     margin-top: 0px;
-    height: 60px;
+    position: unset;
   }
 
+  .github-container {
+    position: unset;
+    justify-content: center;
+  }
   .github-container img {
     height: 30px;
+    margin: 5px;
+  }
+  .github-container p {
+    display: none;
   }
 }
 
-/********************* Media Height 1300px */
-
-@media only screen and (max-width: 1300px) {
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
   body {
     width: 100vw;
     height: 100vh;
@@ -630,7 +637,6 @@ textarea:focus::placeholder {
     box-shadow: 0px 42px 75px -33px rgba(0, 0, 0, 0.5);
   }
 
- 
   .image-muneco {
     height: 250px;
     position: absolute;
@@ -641,21 +647,17 @@ textarea:focus::placeholder {
     display: flex;
     justify-content: center;
     transition: all 1s;
-  
-    
   }
-  
+
   @keyframes brincar {
     50% {
       transform: translateX(115%);
     }
-  
+
     100% {
       transform: translateX(0%);
     }
   }
-
-
 
   .contenedor-caja-textarea {
     width: 85%;
@@ -772,6 +774,8 @@ textarea:focus::placeholder {
   .contenedor-resultado p {
     font-size: medium;
   }
+}
 
-  
+@media screen and (orientation: landscape) {
+  /* Ajustes de diseño para modo paisaje */
 }
